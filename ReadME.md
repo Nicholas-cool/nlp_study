@@ -38,7 +38,7 @@
 
 ### 1.4、库包安装
 
-打开 `pytorch` 官网选择和复制下载命令 https://pytorch.org/。注意此处使用 `pip` 而非 `conda` 进行安装，以防止解析环境时间过长。
+打开 `pytorch` 官网选择和复制下载命令 https://pytorch.org/ 。注意此处使用 `pip` 而非 `conda` 进行安装，以防止解析环境时间过长。
 
 `pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118`
 
