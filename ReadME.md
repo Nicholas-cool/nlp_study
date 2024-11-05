@@ -12,7 +12,7 @@
 
 【代码链接】https://github.com/chunhuizhang/bert_t5_gpt
 
-讲的非常棒，干货十足。对模型的原理源码做了拆解，如果只是想使用模型，这个课程讲的部分底层原理可以不用了解。
+大语言模型的基石，`BERT`、`T5`、`GPT` 分别对应 `transformer` 架构的 `encoder-only`、`encoder-decoder` 和 `decoder-only` 模型。讲的非常棒，干货十足，且每节课有对应的 `ipynb` 代码。对模型的原理源码做了拆解，如果只是想使用模型，这个课程讲的部分底层原理可以不用了解。
 
 
 
@@ -87,6 +87,13 @@ TqdmWarning: IProgress not found. Please update jupyter and ipywidgets. See http
 ```bash
 pip install ipywidgets
 pip install --upgrade jupyter  # 可选
+```
+
+### 1.6、模型清理
+
+```bash
+cd ~/.cache/huggingface/hub/   # 进入 hugging face 模型存储目录
+du -sh *                       # 查看各模型文件占用空间大小
 ```
 
 
