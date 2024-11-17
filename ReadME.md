@@ -2,8 +2,6 @@
 
 【`Github` 仓库地址】https://github.com/Nicholas-cool/nlp_study
 
-
-
 ## 〇、参考教程
 
 ### 0.1、【五道口纳什】`BERT、T5、GPT` 
@@ -12,9 +10,39 @@
 
 【代码链接】https://github.com/chunhuizhang/bert_t5_gpt
 
-大语言模型的基石，`BERT`、`T5`、`GPT` 分别对应 `transformer` 架构的 `encoder-only`、`encoder-decoder` 和 `decoder-only` 模型。讲的非常棒，干货十足，且每节课有对应的 `ipynb` 代码。对模型的原理源码做了拆解，如果只是想使用模型，这个课程讲的部分底层原理可以不用了解。
+大语言模型的基石、底层知识，`BERT`、`T5`、`GPT` 分别对应 `transformer` 架构的 `encoder-only`、`encoder-decoder` 和 `decoder-only` 模型。讲的非常棒，干货十足，且每节课有对应的 `ipynb` 代码。对模型的原理源码做了拆解，如果只是想使用模型，这个课程讲的部分底层原理可以不用了解。
 
+### 0.2、【五道口纳什】`personal chatgpt`
 
+【课程链接】https://www.bilibili.com/video/BV1jk4y1L75w
+
+【代码链接】https://github.com/chunhuizhang/personal_chatgpt
+
+大模型相关理论基础，`Llama`、`LoRA`、数据精度、预训练语料、位置编码、`RLHF` 等常见概念等知识。
+
+### 0.3、【五道口纳什】`LLMs` 推理及部署
+
+【课程链接】https://www.bilibili.com/video/BV1FH4y1c73W
+
+大模型推理及部署阶段的内容，如量化等。
+
+### 0.4、【五道口纳什】`LLMs_tuning`
+
+【课程链接】https://www.bilibili.com/video/BV1bn4y1f7wF
+
+大模型的训练、优化相关内容，经验和技巧等。
+
+### 0.5、【五道口纳什】`LLM & AIGC`
+
+【课程链接】https://www.bilibili.com/video/BV1v24y1n7Xt
+
+聚焦大模型的上层应用，`OpenAI API`、多模态大模型、提示工程（`CoT`、`RAG`、`AI Agent`、`Lang Chain`）等。
+
+### 0.6、【五道口纳什】`Pytorch Distributed`
+
+【课程链接】https://www.bilibili.com/video/BV1jm4y187tM
+
+大模型的分布式计算基础理论。数据并行、模型并行、张量并行、流水线并行、`nccl` 集合通信、`amp` 自动混合精度、`deepspeed`、`accelerate` 等。
 
 ## 一、环境搭建
 
@@ -96,7 +124,23 @@ cd ~/.cache/huggingface/hub/   # 进入 hugging face 模型存储目录
 du -sh *                       # 查看各模型文件占用空间大小
 ```
 
+### 1.7、指定模型存储位置
 
+```bash
+save_path = "../../model_path"   # 模型存储目录
+
+model = LlamaForCausalLM.from_pretrained("yahma/llama-7b-hf",
+    load_in_8bit=True,
+    device_map="auto",
+    cache_dir=save_path    # 设置模型存储目录
+)
+```
+
+### 1.8、`GPU` 监视命令
+
+```bash
+watch -n 1 nvidia-smi
+```
 
 ## 二、代码说明
 

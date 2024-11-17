@@ -12,3 +12,10 @@ sentence_transformers==3.2.0
 bitsandbytes==0.44.1
 loralib==0.1.2
 peft==0.13.2
+diffusers==0.31.0
+bitsandbytes==0.44.1
+trl==0.11.4
+tiktoken==0.7.0
+huggingface_hub==0.25.1
+seaborn==0.13.2
+torchsummary==1.5.1
